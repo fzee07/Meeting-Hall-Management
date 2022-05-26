@@ -14,6 +14,9 @@ const empSchema = new Schema({
     type: mongoose.Types.ObjectId,
     ref: "Department",
   },
+  password: {
+    required: true,
+  },
 });
 
 const Employee = mongoose.model("Employee", empSchema);
