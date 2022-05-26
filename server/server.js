@@ -17,11 +17,12 @@ app.use("/", (req, res) => {
     success: true,
     msg: "Welcome Home",
   });
-});
-app.use("/api/v1", admin);
-app.use("/api/v1", booking);
-app.use("/api/v1", department);
-app.use("/api/v1", calendar);
+}); //Calling Or Defining Home Routes
+
+app.use("/api/v1", admin); //Calling Admin Route
+app.use("/api/v1", booking); //Calling Booking Route
+app.use("/api/v1", department); //Calling Department Route
+app.use("/api/v1", calendar); //Calling Calendar Route
 
 // Starting Server
 const PORT = process.env.PORT || 4040;
