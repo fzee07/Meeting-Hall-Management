@@ -8,13 +8,10 @@ const roomSchema = new Schema(
       required: true,
       unique: true,
     },
-    start_time: {
+    start_day_time: {
       type: Date,
     },
-    end_time: {
-      type: Date,
-    },
-    date: {
+    end_day_time: {
       type: Date,
     },
   },
@@ -23,5 +20,5 @@ const roomSchema = new Schema(
   }
 );
 
-const Room = mongoose.model("room", roomSchema);
+const Room = mongoose.model("Room", roomSchema);
 module.exports = Room;

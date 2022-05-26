@@ -10,23 +10,19 @@ const bookingSchema = new Schema({
     type: mongoose.Types.ObjectId,
     ref: "Room",
   },
+  calendar: {
+    type: mongoose.Types.ObjectId,
+    ref: "Calendar",
+  },
   booked_by_dept: {
     type: mongoose.Types.ObjectId,
     ref: "Department",
   },
-  meeting_title: {
-    type: String,
-    default: "New Meeting",
-  },
-  meeting_desc: {
-    type: String,
-  },
   guests: {
     type: Array,
     default: [],
-    required: true,
   },
 });
 
-const Booking = mongoose.model("booking", bookingSchema);
+const Booking = mongoose.model("Booking", bookingSchema);
 module.exports = Booking;
